@@ -45,6 +45,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
     mutationFn: createNote,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["notes"] });
+      onClose();
     },
   });
 
@@ -53,12 +54,8 @@ export default function NoteForm({ onClose }: NoteFormProps) {
       validationSchema={Schema}
       initialValues={initialValues}
       onSubmit={(values, { resetForm }) => {
-        mutation.mutate(values, {
-          onSuccess: () => {
-            resetForm();
-            onClose();
-          },
-        });
+        mutation.mutate(values)
+        resetForm();
       }}
     >
       <Form className={css.form}>
