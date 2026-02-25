@@ -4,7 +4,7 @@ import css from "./HomeComponent.module.css";
 export default function HomeComponent() {
     return (
       
-        <div className={css.main}>
+        <main className={css.main}>
           <div className={css.container}>
             <h1 className={css.title}>Welcome to NoteHub</h1>
             <p className={css.description}>
@@ -19,7 +19,7 @@ export default function HomeComponent() {
               who values clarity and productivity.
             </p>
           </div>
-        </div>
+        </main>
       
     );
 

@@ -26,7 +26,7 @@ const Schema = Yup.object().shape({
   title: Yup.string()
     .min(3, "The note title must have a minimum length of 3 characters")
     .max(50, "The title is too long")
-    .required("The title muis required!"),
+    .required("The title is required!"),
   content: Yup.string().max(500, "Content is so long"),
   tag: Yup.string()
     .oneOf(
@@ -53,9 +53,8 @@ export default function NoteForm({ onClose }: NoteFormProps) {
     <Formik
       validationSchema={Schema}
       initialValues={initialValues}
-      onSubmit={(values, { resetForm }) => {
+      onSubmit={(values) => {
         mutation.mutate(values)
-        resetForm();
       }}
     >
       <Form className={css.form}>
