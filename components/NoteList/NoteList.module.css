@@ -75,3 +75,34 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.detailsButton {
+    background-color: #585681;
+    /* фиолетовый оттенок */
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.detailsButton:hover {
+    background-color: #b1abf1;
+    /* темнее при наведении */
+}
+
+.button {
+    background-color: #ef4444;
+    /* красная кнопка для удаления */
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #b91c1c;
+    /* темнее при наведении */ }
