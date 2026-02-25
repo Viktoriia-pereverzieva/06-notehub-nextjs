@@ -1,7 +1,7 @@
 import css from "./HomeComponent.module.css";
 
 
-export default function Home() {
+export default function HomeComponent() {
     return (
       
         <div className={css.main}>

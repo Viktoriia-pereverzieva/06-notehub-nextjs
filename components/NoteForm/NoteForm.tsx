@@ -6,9 +6,9 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import * as Yup from "yup";
 import Loader from "../Loader/Loader";
 
-type NoteFormProps = {
+interface NoteFormProps {
   onClose: () => void;
-};
+}
 
 interface NoteFormValues {
   title: string;
