@@ -38,6 +38,6 @@ export async function deleteNote(id: string): Promise <Note> {
 }
 
 export default async function fetchNoteById(id: string): Promise <Note> {
-  const { data } = await api.get(`/notes/${id}`);
+  const { data } = await api.get<Note>(`/notes/${id}`);
   return data;
 }

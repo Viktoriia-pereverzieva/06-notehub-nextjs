@@ -76,6 +76,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
         <div className={css.formGroup}>
           <label htmlFor={`${fieldId}-content`}>Content</label>
           <Field
+            as="textarea"
             name="content"
             rows={8}
             className={css.textarea}
